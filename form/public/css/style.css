@@ -1,0 +1,82 @@
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  background-color: #8a2be2 !important;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario {
+  align-items: center;
+  width: 400px;
+  height: 950px;
+  background-image: url(../img/fasd.png);
+  background-repeat: no-repeat;
+  padding-top: 10rem;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 2rem;
+}
+
+.formas {
+  width: 85%;
+  margin: 0;
+}
+
+h2 {
+  margin-left: 20px;
+}
+
+.button {
+  background-color: transparent; /* Green */
+  border: 2px solid #2e3575;
+  transition-duration: 0.4s;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #2e3575; /* Green */
+  color: white !important;
+}
+
+a:link {
+  text-decoration: white !important;
+  color: #dde3e9 !important;
+}
+
+a:link:hover {
+  text-decoration: white;
+  color: white;
+}
+
+.botao {
+  position: absolute;
+  bottom: 200px;
+  left: 150px;
+}
+
+.btnEnviar {
+  position: absolute;
+  bottom: 70px;
+  right: 10px;
+}
+
+p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

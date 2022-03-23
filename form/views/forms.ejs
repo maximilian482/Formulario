@@ -1,0 +1,52 @@
+<%- include('content/header') -%>
+
+<div class="container">
+  <div class="formulario">
+    <h2>Quais adesivos</h2>
+
+    <% if (typeof error === "string") {%>
+    <div class="alert alert-danger">Preencha pelo menos 1 campo</div>
+    <% } %>
+
+    <form class="row formas text-center" action="/forms" method="POST">
+      <div class="col-sm-3 p-3">&#10003; React</div>
+      <div class="col-sm-9 p-3">
+        <input type="number" name="qtd_react" value="<%= body.qtd_react %>" />
+        Qtd
+      </div>
+
+      <div class="col-sm-3 p-3">&#10003; Angular</div>
+      <div class="col-sm-9 p-3">
+        <input
+          type="number"
+          name="qtd_angular"
+          value="<%= body.qtd_angular %>"
+        />
+        Qtd
+      </div>
+
+      <div class="col-sm-3 p-3">&#10003; Vue</div>
+      <div class="col-sm-9 p-3">
+        <input type="number" name="qtd_vue" value="<%= body.qtd_vue %>" />
+        Qtd
+      </div>
+
+      <div class="p-3">
+        Observações: <br /><textarea
+          name="observacoes"
+          rows="4"
+          cols="30"
+          placeholder="Alguma dúvida? Recado?"
+          value="<%= body.observacoes %>"
+        ></textarea
+        ><br /><br />
+      </div>
+
+      <div class="btnEnviar">
+        <input type="submit" value="Enviar" class="btn btn-primary btn-lg" />
+      </div>
+    </form>
+  </div>
+</container>
+
+<%- include('content/footer-scripts') -%>

@@ -1,0 +1,44 @@
+<%- include('content/header') -%>
+
+<div class="container">
+  <div class="formulario">
+    <h2>Quais adesivos</h2>
+
+    <% if (typeof error === "string") {%>
+    <div class="alert alert-danger">Preencha pelo menos 1 campo</div>
+
+    <% } %> <% pay.forEach(function(body){ %>
+    <form class="row formas text-center" action="/pay" method="post">
+      <div class="col-sm-6 p-3">&#10003; React</div>
+      <div class="col-sm-6 p-3"><%= body.qtd_react %> Qtd</div>
+
+      <div class="col-sm-6 p-3">&#10003; Angular</div>
+      <div class="col-sm-6 p-3"><%= body.qtd_angular %> Qtd</div>
+
+      <div class="col-sm-6 p-3">&#10003; Vue</div>
+      <div class="col-sm-6 p-3"><%= body.qtd_vue %> Qtd</div>
+
+      <div class="p-3">Observações: <br /><%= body.observacoes %><br /></div>
+
+      <div>
+        <h2>Forma de Pagamento</h2>
+        <br /><br />
+        <select type="text" name="formato" value="<%= body.formato %>">
+          <option value="pix" selected>Selecione...</option>
+          <option value="dinheiro">Dinheiro</option>
+          <option value="pix">Pix</option>
+          <option value="boleto">Boleto</option>
+          <option value="cartao">Cartão</option>
+        </select>
+      </div>
+      <% }); %>
+
+      <div class="btnEnviar">
+        <input type="submit" value="Enviar" class="btn btn-primary btn-lg" />
+      </div>
+    </form>
+  </div>
+</container>
+
+<%- include('content/footer-scripts') -%>
+
